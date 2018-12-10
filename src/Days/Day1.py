@@ -10,7 +10,7 @@ class Day1Puzzle1(Puzzle):
     """
     def solve(self):
         print("Day1 - Puzzle1")
-        freq_changes = self.input.splitlines();
+        freq_changes = self.input.splitlines()
 
         current_freq = 0
         for change in freq_changes:
@@ -25,7 +25,7 @@ class Day1Puzzle2(Puzzle):
     """
     def solve(self):
         print("Day1 - Puzzle2")
-        freq_changes = self.input.splitlines();
+        freq_changes = self.input.splitlines()
 
         current_freq = 0
         occurences = {}
@@ -64,13 +64,12 @@ class Day1(Day):
         :param puzzle_number: number of the puzzle
         :return: instance of the puzzle with the given number of puzzle.
         """
-        puzzle_maps_for_day = {
-            '1': Day1Puzzle1(puzzle_number=puzzle_number, day_number=self.day_number),
-            '2': Day1Puzzle2(puzzle_number=puzzle_number, day_number=self.day_number)
-        }
+        puzzles_for_day = [
+            Day1Puzzle1(puzzle_number=puzzle_number, day_number=self.day_number),
+            Day1Puzzle2(puzzle_number=puzzle_number, day_number=self.day_number)
+        ]
 
-        return puzzle_maps_for_day[puzzle_number]
+        return puzzles_for_day[puzzle_number-1]
 
     def __repr__(self):
-        return "<Day1.day {}>".format(self.day)
-
+        return "<Day1.day {}>".format(self.day_number)
