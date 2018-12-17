@@ -39,7 +39,7 @@ class Day4Puzzle1(Puzzle):
     Day1 Puzzle1 class
     """
     def solve(self):
-        print("Day4 - Puzzle4")
+        print("Day4 - Puzzle1")
         log_lines = self.input.splitlines()
 
         guards = {}                             # keep the sleeping records for each guard
